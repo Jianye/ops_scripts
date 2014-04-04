@@ -1,5 +1,5 @@
 <?php
-//crontab: ps -ef| grep -vgrep | grep pmAutoCheck.php && /usr/bin/php pmAutoCheck.php 2>&1 >/dev/null &
+//crontab: ps -ef| grep -v grep | grep pmAutoCheck.php ;if [ $? -ne 0 ];then /usr/bin/php pmAutoCheck.php 2>&1 >/dev/null &;fi
 set_time_limit(0); 
 //获取pm2信息
 $comGetPm2Info="pm2 jlist";
