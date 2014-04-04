@@ -1,4 +1,5 @@
 <?php
+//crontab: ps -ef| grep -vgrep | grep pmAutoCheck.php && /usr/bin/php pmAutoCheck.php 2>&1 >/dev/null &
 set_time_limit(0); 
 //获取pm2信息
 $comGetPm2Info="pm2 jlist";
@@ -47,6 +48,7 @@ for( $i=0 ;$i<$pm2InstanceNum ;$i++){
             restartPm2Instance($pm_id);
         }
     }
-    sleep(60);
+
 }
+    sleep(60);
 }
