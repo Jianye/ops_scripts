@@ -7,7 +7,7 @@ def writeEmail(emailaddress):
         fg.close()
 
 
-emailfile='/home/jianye/xiaomiemail/xiaomiemail.txt'
+emailfile='/home/email.txt'
 
 fg  = open(emailfile)
 
