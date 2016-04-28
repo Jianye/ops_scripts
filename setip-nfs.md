@@ -33,7 +33,7 @@ service nfs start
 ### 创建待共享的目录
 
 ```
-mkdir -p /data/nfs/www.mkjogo.com
+mkdir -p /data/nfs/www.mo.com
 chown -R www:www /data/nfs
 ```
 
@@ -67,18 +67,18 @@ yum -y install nfs-utils nfs-utils-lib
 ### 创建本地数据目录
 
 ```
-mkdir -p /data/nfs/www.mkjogo.com
+mkdir -p /data/nfs/www.mo.com
 ```
 
 ### 挂载服务器端目录
 
 ```
-mount -t nfs 192.168.0.21:/data/nfs/www.mkjogo.com /data/nfs/www.mkjogo.com
+mount -t nfs 192.168.0.21:/data/nfs/www.mo.com /data/nfs/www.mo.com
 ```
 
 ### 设置开机自动挂载
 
 ```
-echo "192.168.0.21:/data/nfs/www.mkjogo.com     /data/nfs/www.mkjogo.com     nfs auto,noatime,nolock,bg,intr,tcp,actimeo=1800 0 0" >> /etc/fstab
+echo "192.168.0.21:/data/nfs/www.mo.com     /data/nfs/www.mo.com     nfs auto,noatime,nolock,bg,intr,tcp,actimeo=1800 0 0" >> /etc/fstab
 mount -a
 ```
